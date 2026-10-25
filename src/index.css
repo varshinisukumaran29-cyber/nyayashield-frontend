@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-950 text-slate-100 font-sans;
+  }
+}
+
+/* Custom Scrollbar for Legal Review Text */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0B132B;
+}
+::-webkit-scrollbar-thumb {
+  background: #1C2541;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3A506B;
+}
+
+/* PII Highlight Badges */
+.pii-highlight {
+  @apply inline-block px-1.5 py-0.5 rounded text-xs font-mono font-medium cursor-pointer transition-all duration-150;
+}
+
+.pii-highlight-AADHAAR,
+.pii-highlight-PAN,
+.pii-highlight-BANK_ACCOUNT {
+  @apply bg-red-950/80 text-red-300 border border-red-500/50 hover:bg-red-900/90;
+}
+
+.pii-highlight-VICTIM,
+.pii-highlight-MINOR {
+  @apply bg-purple-950/80 text-purple-200 border border-purple-500/60 hover:bg-purple-900/90;
+}
+
+.pii-highlight-PERSON_NAME {
+  @apply bg-teal-950/80 text-teal-200 border border-teal-500/50 hover:bg-teal-900/90;
+}
+
+.pii-highlight-RESIDENTIAL_ADDRESS {
+  @apply bg-amber-950/80 text-amber-200 border border-amber-500/50 hover:bg-amber-900/90;
+}
+
+.pii-highlight-PHONE,
+.pii-highlight-EMAIL {
+  @apply bg-blue-950/80 text-blue-200 border border-blue-500/50 hover:bg-blue-900/90;
+}
